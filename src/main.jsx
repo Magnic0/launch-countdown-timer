@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import './css/style.css';
 import { Header } from './app/Header';
 import { Timer } from './app/Timer';
 
