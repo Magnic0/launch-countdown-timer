@@ -1,5 +1,15 @@
+*, *:visited {
+    box-sizing: border-box;
+    color: inherit;
+    font-family: 'Red Hat Text', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
 html {
-    background-color: black;
-    color: white;
+    background-color: rgb(32, 29, 37);
+    background-image: url('../assets/svg/bg-stars.svg');
+    color: $col-GrayishBlue;
     text-align: center;
 }

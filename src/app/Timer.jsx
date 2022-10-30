@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { useEffect } from 'react'
 
 const time = {
-  days: 0,
+  days: 1,
   hours: 0,
   minutes: 0,
-  seconds: 3
+  seconds: 0
 }
 
 const initialState = (
@@ -19,6 +19,16 @@ const initialState = (
   (time.seconds)
 
 );
+
+// function that make numbers have at least 2 digits
+function parseTwoNum(num) {
+  return (num).toLocaleString(
+    'en-US',
+    {
+      minimumIntegerDigits: 2
+    }
+  )
+}
 
 export function Timer() {
   const [state, setState] = useState(initialState);
@@ -45,21 +55,21 @@ export function Timer() {
   const days = dayState;
   
   return (
-    <section>
-      <div>
-        <span>{days}</span>
+    <section className='timer'>
+      <div className='timer__num'>
+        <span>{parseTwoNum(days)}</span>
         <span> days</span>
       </div>
-      <div>
-        <span>{hours}</span>
+      <div className='timer__num'>
+        <span>{parseTwoNum(hours)}</span>
         <span> hours</span>
       </div>
-      <div>
-        <span>{minutes}</span>
+      <div className='timer__num'>
+        <span>{parseTwoNum(minutes)}</span>
         <span> minutes</span>
       </div>
-      <div>
-        <span>{seconds}</span>
+      <div className='timer__num'>
+        <span>{parseTwoNum(seconds)}</span>
         <span> seconds</span>
       </div>
     </section>
