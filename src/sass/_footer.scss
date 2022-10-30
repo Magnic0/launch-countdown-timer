@@ -1,0 +1,33 @@
+footer {
+    align-items: center;
+    background-image: url('../assets/svg/pattern-hills.svg');
+    background-position: 123em;
+    background-size: cover;
+    bottom: 0;
+    display: flex;
+    height: 12em;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+
+    & a {
+        height: 25px;
+        margin-top: 70px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 25px;
+
+        &:nth-child(1) {
+            background-image: url('../assets/svg/icon-facebook.svg');
+        }
+        &:nth-child(2) {
+            background-image: url('../assets/svg/icon-pinterest.svg');
+            margin-left: 2.25em;
+            margin-right: 2.25em;
+        }
+        &:nth-child(3) {
+            background-image: url('../assets/svg/icon-instagram.svg');
+        }
+    }
+}
