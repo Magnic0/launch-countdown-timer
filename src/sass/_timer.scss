@@ -1,0 +1,75 @@
+.timer {
+     align-items: center;
+     display: flex;
+     justify-content: space-evenly;
+
+     &__in {
+          display: flex;
+          flex-direction: column;
+          font-size: .5em;
+          letter-spacing: .4em;
+          text-transform: uppercase;
+
+          & p {
+               margin-top: 10px;
+          }
+     }
+     
+     &__num {
+          display: flex;
+          flex-direction: column;
+          height: 4.8rem;
+          justify-content: center;
+          width: 4.25rem;
+          
+          & p {
+               line-height: 1em;
+               color: $col-SoftRed;
+               font-size: 4.5em;
+               height: 100%;
+               letter-spacing: 0px;
+               text-align: center;
+               margin: 0;
+          }
+
+          &--top {
+               background-color: $col-DarkDesaturatedBlue;
+               border-radius: 6px;
+               height: 2.4rem;
+               overflow: hidden;
+               transform-origin: bottom;
+               
+               & p {
+                    transform: translateY(50%);
+               }
+          }
+          
+          &--bot {
+               background-color: $col-DarkDesaturatedBlue;
+               border-radius: 6px;
+               height: 2.4rem;
+               overflow: hidden;
+               
+               & p {
+                    transform: translateY(-50%);
+               }
+          }
+     }
+}
+
+// flip animation
+
+@keyframes flip {
+     from {
+          transform: rotateX(0deg);
+     }
+     to {
+          transform: rotateX(180deg);
+     }
+}
+
+.flip {
+     animation-name: flip;
+     animation-duration: 1s;
+     animation-play-state: running;
+}
