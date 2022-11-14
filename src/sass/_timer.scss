@@ -114,13 +114,13 @@
 .unfold {
      transform-style: preserve-3d;
      animation-name: flip;
-     animation-duration: .9s;
+     animation-duration: 1s;
      animation-play-state: running;
 }
 
 .fold {
      transform-style: preserve-3d;
      animation-name: flip;
-     animation-duration: .9;
+     animation-duration: 1s;
      animation-play-state: running;
 }
