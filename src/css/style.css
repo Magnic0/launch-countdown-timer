@@ -141,8 +141,8 @@ header div h1 {
   transform-style: preserve-3d;
   -webkit-animation-name: flip;
           animation-name: flip;
-  -webkit-animation-duration: 0.9s;
-          animation-duration: 0.9s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -151,8 +151,8 @@ header div h1 {
   transform-style: preserve-3d;
   -webkit-animation-name: flip;
           animation-name: flip;
-  -webkit-animation-duration: 0.9;
-          animation-duration: 0.9;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
