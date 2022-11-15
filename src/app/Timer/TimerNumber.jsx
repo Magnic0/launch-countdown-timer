@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { parseTwoDig } from "./Timer";
 
-export function TimerDays({ timeState, unfoldClass, foldClass }) {
-     const [flipDay, setFlipDay] = useState(false);
+export function TimerNumber({ timeState, unfoldClass, foldClass, timeStamp }) {
+     const [flipSec, setFlipSec] = useState(false);
      useEffect(() => {
-       setFlipDay(true);
+       setFlipSec(true);
        setTimeout(() => {
-         setFlipDay(false);
+         setFlipSec(false);
        }, 900);
      }, [timeState]);
-
+     
      return (
           <div className='timer__in'>
                <div className='timer__front'>
@@ -17,13 +17,13 @@ export function TimerDays({ timeState, unfoldClass, foldClass }) {
                          <p>{parseTwoDig(timeState)}</p>
                     </div>
 
-                    <div className={'timer__front--bot' + (flipDay ? unfoldClass : '')}>
+                    <div className={'timer__front--bot' + (flipSec ? unfoldClass : '')}>
                          <p>{parseTwoDig(timeState)}</p>
                     </div>
                </div>
 
                <div className='timer__old'>
-                    <div className={'timer__old--top' + (flipDay ? foldClass : '')}>
+                    <div className={'timer__old--top' + (flipSec ? foldClass : '')}>
                          <p>{parseTwoDig(timeState)}</p>
                     </div>
 
@@ -32,7 +32,7 @@ export function TimerDays({ timeState, unfoldClass, foldClass }) {
                     </div>
                </div>
 
-               <p>days</p>
+               <p>{timeStamp}</p>
           </div>
      );
 }

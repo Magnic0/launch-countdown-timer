@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import { TimerSeconds } from './TimerSeconds';
-import { TimerMinutes } from './TimerMinutes';
-import { TimerHours } from './TimerHours';
-import { TimerDays } from './TimerDays';
+import { TimerNumber } from './TimerNumber';
 
 // object that specifies initial time
 const time = {
@@ -70,28 +67,32 @@ export function Timer() {
 
   return (
     <section className='timer'>
-      <TimerDays
+      <TimerNumber
         timeState={days}
         unfoldClass={unfoldClass}
         foldClass={foldClass}
+        timeStamp={"days"}
       />
 
-      <TimerHours
+      <TimerNumber
         timeState={hours}
         unfoldClass={unfoldClass}
         foldClass={foldClass}
+        timeStamp={"hours"}
       />
 
-      <TimerMinutes
+      <TimerNumber
         timeState={minutes}
         unfoldClass={unfoldClass}
         foldClass={foldClass}
+        timeStamp={"minutes"}
       />
 
-      <TimerSeconds
+      <TimerNumber
         timeState={seconds}
         unfoldClass={unfoldClass}
         foldClass={foldClass}
+        timeStamp={"seconds"}
       />
     </section>
   )
