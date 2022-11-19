@@ -59,7 +59,7 @@
      &__old {
           display: flex;
           flex-direction: column;
-          translate: 0 -100%;
+          translate: 0px -100%;
           
           & p {
                line-height: 1em;
@@ -105,6 +105,26 @@
           z-index: 0;
           transform: rotateX(0deg);
      }
+
+     30% {
+          z-index: 1;
+          transform: rotateX(180deg);
+     }
+     40% {
+          transform: rotateX(130deg);
+     }
+     45% {
+          transform: rotateX(120deg);
+     }
+     50% {
+          transform: rotateX(130deg);
+     }
+     60% {
+          transform: rotateX(180deg);
+     }
+     70% {
+          transform: rotateX(160deg);
+     }
      100% {
           z-index: 1;
           transform: rotateX(180deg);
@@ -113,14 +133,15 @@
 
 .unfold {
      transform-style: preserve-3d;
+     animation-timing-function: linear;
      animation-name: flip;
-     animation-duration: 1s;
+     animation-duration: .8s;
      animation-play-state: running;
 }
 
 .fold {
      transform-style: preserve-3d;
      animation-name: flip;
-     animation-duration: 1s;
+     animation-duration: .8s;
      animation-play-state: running;
 }
