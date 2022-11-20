@@ -12,4 +12,19 @@ html {
     background-image: url('../assets/svg/bg-stars.svg');
     color: $col-GrayishBlue;
     text-align: center;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+#root {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 12rem;
+}
+
+.container {
+    padding-bottom: 3.125rem;
 }

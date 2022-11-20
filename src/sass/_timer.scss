@@ -9,18 +9,21 @@
           font-size: .5em;
           letter-spacing: .4em;
           text-transform: uppercase;
-          width: 75px;
+          width: 4.6875rem;
 
           & p {
-               margin-top: 10px;
+               margin-top: 0.625rem;
           }
      }
      
      &__front {
           display: flex;
           flex-direction: column;
+          box-shadow: 0rem 0.1875rem 0rem $col-VeryDarkerBlue;
+          border-radius: 0.625rem;
           
           & p {
+               font-weight: bold;
                line-height: 1em;
                color: $col-SoftRed;
                font-size: 4.5em;
@@ -32,36 +35,39 @@
           &--top {
                filter: brightness(.85);
                background-color: $col-DarkDesaturatedBlue;
-               border-radius: 6px;
+               border-radius: 0.375rem;
                height: 2.4rem;
                overflow: hidden;
-               z-index: -1;
 
                & p {
+                    font-weight: bold;
                     transform: translateY(50%);
                }
           }
 
-          &--bot {
+          &--bot { // unfolds
                translate: 0 -100%;
                background-color: $col-DarkDesaturatedBlue;
-               border-radius: 6px;
+               border-radius: 0.375rem;
                height: 2.4rem;
                overflow: hidden;
                transform-origin: bottom;
                
                & p {
+                    font-weight: bold;
                     transform: translateY(60%) rotateX(-180deg);
                }
           }
      }
      
      &__old {
+          position: absolute;
           display: flex;
           flex-direction: column;
-          translate: 0 -100%;
+          width: 4.6875rem;
           
           & p {
+               font-weight: bold;
                line-height: 1em;
                color: $col-SoftRed;
                font-size: 4.5em;
@@ -70,57 +76,31 @@
                margin: 0;
           }
           
-          &--top {
+          &--top { // folds
                filter: brightness(.85);
                translate: 0 0%;
                background-color: $col-DarkDesaturatedBlue;
-               border-radius: 6px;
+               border-radius: 0.375rem;
                height: 2.4rem;
                overflow: hidden;
                transform-origin: bottom;
                
                & p {
+                    font-weight: bold;
                     transform: translateY(55%);
                }
           }
 
           &--bot {
                background-color: $col-DarkDesaturatedBlue;
-               border-radius: 6px;
+               border-radius: 0.375rem;
                height: 2.4rem;
                overflow: hidden;
-               z-index: -1;
                
                & p {
+                    font-weight: bold;
                     transform: translateY(-50%);
                }
           }
      }
-}
-
-// flip animation
-
-@keyframes flip {
-     0% {
-          z-index: 0;
-          transform: rotateX(0deg);
-     }
-     100% {
-          z-index: 1;
-          transform: rotateX(180deg);
-     }
-}
-
-.unfold {
-     transform-style: preserve-3d;
-     animation-name: flip;
-     animation-duration: .9s;
-     animation-play-state: running;
-}
-
-.fold {
-     transform-style: preserve-3d;
-     animation-name: flip;
-     animation-duration: .9;
-     animation-play-state: running;
 }
