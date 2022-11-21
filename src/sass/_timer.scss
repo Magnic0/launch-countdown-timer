@@ -2,14 +2,15 @@
      align-items: center;
      display: flex;
      justify-content: space-evenly;
+     max-width: 23.75rem;
+     margin: auto;
 
      &__in {
           display: flex;
           flex-direction: column;
-          font-size: .5em;
+          font-size: .5em; // fix this app breaker!
           letter-spacing: .4em;
           text-transform: uppercase;
-          width: 4.6875rem;
 
           & p {
                margin-top: 0.625rem;
@@ -19,7 +20,7 @@
      &__front {
           display: flex;
           flex-direction: column;
-          box-shadow: 0rem 0.1875rem 0rem $col-VeryDarkerBlue;
+          box-shadow: 0rem .4rem 0rem $col-VeryDarkerBlue;
           border-radius: 0.625rem;
           
           & p {
@@ -36,12 +37,16 @@
                filter: brightness(.85);
                background-color: $col-DarkDesaturatedBlue;
                border-radius: 0.375rem;
-               height: 2.4rem;
+               border-bottom: 1px solid $col-VeryDarkerBlue;
                overflow: hidden;
 
+               @include timeNumberWidth;
+               @include timeNumberHeight;
+
                & p {
+                    text-align: center;
                     font-weight: bold;
-                    transform: translateY(50%);
+                    transform: translateY(1.2rem);
                }
           }
 
@@ -49,13 +54,17 @@
                translate: 0 -100%;
                background-color: $col-DarkDesaturatedBlue;
                border-radius: 0.375rem;
-               height: 2.4rem;
                overflow: hidden;
                transform-origin: bottom;
+
+               
+               @include timeNumberWidth;
+               @include timeNumberHeight;
                
                & p {
+                    text-align: center;
                     font-weight: bold;
-                    transform: translateY(60%) rotateX(-180deg);
+                    transform: translateY(1.3rem) rotateX(-180deg);
                }
           }
      }
@@ -64,7 +73,6 @@
           position: absolute;
           display: flex;
           flex-direction: column;
-          width: 4.6875rem;
           
           & p {
                font-weight: bold;
@@ -81,25 +89,84 @@
                translate: 0 0%;
                background-color: $col-DarkDesaturatedBlue;
                border-radius: 0.375rem;
-               height: 2.4rem;
+               border-bottom: 1px solid $col-VeryDarkerBlue;
                overflow: hidden;
                transform-origin: bottom;
                
+               @include timeNumberWidth;
+               @include timeNumberHeight;
+               
                & p {
+                    text-align: center;
                     font-weight: bold;
-                    transform: translateY(55%);
+                    transform: translateY(1.2rem);
                }
           }
 
           &--bot {
                background-color: $col-DarkDesaturatedBlue;
                border-radius: 0.375rem;
-               height: 2.4rem;
                overflow: hidden;
                
+               @include timeNumberWidth;
+               @include timeNumberHeight;
+
                & p {
+                    text-align: center;
                     font-weight: bold;
-                    transform: translateY(-50%);
+                    transform: translateY(-1.15rem);
+               }
+          }
+     }
+}
+
+@media screen and (min-width: $desktop) {
+     .timer {
+          max-width: 60rem;
+
+          &__in {
+               
+               letter-spacing: 1em;
+               & p {
+                    font-size: 1rem;
+               }
+          }
+
+          &__front {
+               border-radius: 1.2rem;
+               box-shadow: 0rem .6rem 0rem $col-VeryDarkerBlue;
+
+               & p {
+                    font-size: 5rem;
+               }
+               &--top {
+                    border-radius: 0.8rem;
+                    & p {
+                         transform: translateY(2rem);
+                    }
+               }
+               &--bot {
+                    border-radius: 0.8rem;
+                    & p {
+                         transform: translateY(2.62rem) rotateX(-180deg);
+                    }
+               }
+          }
+          &__old {
+               & p {
+                    font-size: 5rem;
+               }
+               &--top{
+                    border-radius: 0.8rem;
+                    & p {
+                         transform: translateY(2rem);
+                    }
+               }
+               &--bot {
+                    border-radius: 0.8rem;
+                    & p {
+                         transform: translateY(-2.82rem);
+                    }
                }
           }
      }

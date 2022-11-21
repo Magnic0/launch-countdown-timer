@@ -1,0 +1,17 @@
+@mixin timeNumberWidth() {
+
+     width: 4.6875rem;
+
+     @media screen and (min-width: $desktop) {
+          width: calc(4.6875rem * 2.3);
+     }
+}
+
+@mixin timeNumberHeight() {
+
+     height: 2.4rem;
+
+     @media screen and (min-width: $desktop) {
+          height: calc(2.4rem * 2);
+     }
+}

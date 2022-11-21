@@ -17,6 +17,8 @@ html {
 
 body {
     height: 100%;
+    box-sizing: border-box;
+    min-width: 20.625rem;
 }
 
 #root {

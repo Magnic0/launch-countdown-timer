@@ -2,8 +2,8 @@ footer {
     box-sizing: border-box;
     align-items: center;
     background-image: url('../assets/svg/pattern-hills.svg');
-    background-position: 123rem;
-    background-size: cover;
+    background-position: center;
+    background-size: auto;
     bottom: 0;
     display: flex;
     height: 12rem;
@@ -29,6 +29,11 @@ footer {
         }
         &:nth-child(3) {
             background-image: url('../assets/svg/icon-instagram.svg');
+        }
+
+        &:hover {
+            transition: 150ms ease-in-out;
+            filter: brightness(.8) sepia(.9) hue-rotate(-60deg) saturate(5);
         }
     }
 }
