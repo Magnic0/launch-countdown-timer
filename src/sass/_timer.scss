@@ -35,7 +35,7 @@
           }
 
           &--top {
-               filter: brightness(.85);
+               filter: brightness(.8);
                background-color: $col-DarkDesaturatedBlue;
                border-radius: 0.375rem;
                border-bottom: 1px solid $col-VeryDarkerBlue;
@@ -86,7 +86,7 @@
           }
           
           &--top { // folds
-               filter: brightness(.85);
+               filter: brightness(.8);
                translate: 0 0%;
                background-color: $col-DarkDesaturatedBlue;
                border-radius: 0.375rem;

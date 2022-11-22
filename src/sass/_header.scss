@@ -14,3 +14,16 @@ header {
         }
     }
 }
+
+@media screen and (min-width:$desktop) {
+    header {
+        padding-top: 5rem;
+        padding-bottom: 6rem;
+
+        & div {
+            & h1 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
