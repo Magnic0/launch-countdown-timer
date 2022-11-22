@@ -22,6 +22,9 @@ body {
 }
 
 #root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     min-height: 100%;
     padding-bottom: 12rem;
