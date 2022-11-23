@@ -3,7 +3,6 @@
      display: flex;
      justify-content: space-evenly;
      max-width: 23.75rem;
-     min-width: 50rem;
      margin: auto;
 
      &__in {
@@ -123,6 +122,7 @@
 
 @media screen and (min-width: $desktop) {
      .timer {
+          min-width: 50rem;
           max-width: 60rem;
 
           &__in {
