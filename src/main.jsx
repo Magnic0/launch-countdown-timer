@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './css/style.css';
+import './sass/style.scss';
 import { Header } from './app/Header';
 import { Timer } from './app/Timer/Timer';
 import { Footer } from './app/Footer';
