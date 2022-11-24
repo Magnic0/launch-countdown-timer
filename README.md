@@ -14,7 +14,6 @@ This is a solution to the [Launch countdown timer challenge on Frontend Mentor](
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
     - [Continued development](#continued-development)
-    - [Useful resources](#useful-resources)
   - [Author](#author)
   - [Acknowledgments](#acknowledgments)
 
@@ -30,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-> WIP
+![Project's Screenshot](https://user-images.githubusercontent.com/99155340/203653919-761d1179-2867-4bd4-938c-219a1d16c961.png)
 
 ### Links
 
@@ -47,23 +46,19 @@ Users should be able to:
 - [React](https://reactjs.org/) - JavaScript library
 - [Vite](https://vitejs.dev/) - Development Tool focused in performance
 
-### What I learned
+### What I've learned
 
-> WIP
+This project was a wonderful source of info and learning material about ReactJS. Not only that, I've also learned how to work with mixins and responsive CSS units, which was a true pain for me to understand.
 
 ### Continued development
 
-> WIP
-
-### Useful resources
-
-> WIP
+I'm planning to improve the logic, refactoring and creating more user interaction with the countdown timer.
 
 ## Author
 
 - GitHub - [Magnic0](https://github.com/Magnic0)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@magnic0](https://www.frontendmentor.io/profile/Magnic0)
 
 ## Acknowledgments
 
-> WIP
+The Frontend Mentor's Launch Countdown Timer challenge was a great learning experience, one that I'm going to remember of for my whole career journey. A big thank you for all the designers and developers that have make this possible.
